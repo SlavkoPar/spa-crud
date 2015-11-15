@@ -24,8 +24,6 @@ I was following the presentation of [Steve Sanderson - Architecting large Single
 
 #### Links
 [Try it:](http://slavkopar.github.io/spa-crud/dist/index.html)
-[github](https://github.com/SlavkoPar/SLGrid-SPA/)
-
 
 ## Background
 
