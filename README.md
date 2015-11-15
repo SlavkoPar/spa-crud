@@ -23,7 +23,7 @@ CrossroadsJS implements hashtag routing, and RequireJS handles module loading an
 I was following the presentation of [Steve Sanderson - Architecting large Single Page Applications with Knockout](https://vimeo.com/97519516)
 
 #### Links
-[Try it:](http://slavkopar.github.io/spa-crud/dist/index.html)
+[Try it](http://slavkopar.github.io/spa-crud/dist/index.html)
 
 ## Background
 
@@ -41,11 +41,11 @@ That way we avoid generation of HTML markup and JavaScript code at server, escap
 ##Getting Started
 For CRUD operations of an Entity we need to define 3  JavaScript classes, acutally 3 AMD modules.
 In example for entity 'People' we define:
-*Person, inherits SLEntity, definition of properties with default value and validation rules.
-*PersonDB, inherits SLEntityDB, database adapter, different for different types of databases, performs ajax calls to server
-*PersonGrid, uses SLGrid and SLPager, keeping list of entites, performing grid operations like paging, sorting, inline editing ...
-    It defines properties of Person Entity which will be presented in tabular view.
-    It generates Row and RowEdit templates based on definition of columns.
+* Person, inherits SLEntity, definition of properties with default value and validation rules.
+* PersonDB, inherits SLEntityDB, database adapter, different for different types of databases, performs ajax calls to server
+* PersonGrid, uses SLGrid and SLPager, keeping list of entites, performing grid operations like paging, sorting, inline editing ... 
+  It defines properties of Person Entity which will be presented in tabular view. 
+  It generates Row and RowEdit templates based on definition of columns.
 
 Actually we can generate these classes using 'yeoman', reading from database definition and respecting all relations from database like: one to many, many to many ...
 
@@ -67,7 +67,7 @@ class Person extends SLEntity {
 }
 
 ```
-[see source code at:] (https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person.js)
+[Person source code] (https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person.js)
 
 
 ```javascript
@@ -87,7 +87,7 @@ PersonDB.prototype.Url = {
 }
 
 ```
-[see source code at:] (https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person-db.js)
+[PersonDB source code] (https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person-db.js)
 
 
 ```javascript
@@ -146,14 +146,14 @@ class PersonGrid {
 }
 
 ```
-[see source code at:] (https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js)
+[PersonGrid source code] (https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js)
 [regarding how child knockout components get connected visit:](http://jsfiddle.net/SlavkoPar/066kzxjz/)
          
 
 ## Base javascript classes do the job:
-*[SLEntity](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity.js)
-*[SLEntityDB](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity-db.js)
-*[SLDropdownDB](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-dropdown-db.js)
+* [SLEntity](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity.js)
+* [SLEntityDB](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity-db.js)
+* [SLDropdownDB](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-dropdown-db.js)
 
 ##Native Validation Rules
 **Required**:
