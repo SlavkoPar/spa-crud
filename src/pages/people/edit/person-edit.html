@@ -1,0 +1,76 @@
+
+
+<h2>Person</h2>
+
+
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">profile</a></li>
+        <li role="presentation"><a href="#twitter" aria-controls="profile" role="tab" data-toggle="tab">Twitter</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style="border: 1px solid #ddd;border-top-width:0px;">
+
+        <div role="tabpanel" class="tab-pane fade in active" id="profile">
+            <form class="ffform-horizontal" style="width:50%">
+
+                <div class="form-group">
+                    <label class="control-label">PersonId</label>
+                    <input data-bind="value:person.PersonId" class="form-control" placeholder="PersonId">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input data-bind="value:person.Name" class="form-control" placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">City</label>
+                    <!--<drop-down params="EntityDB:CityDB, Code:person.CityId, Name:person.CityName, isViewMode:person.isViewMode"></drop-down>-->   <!-- Items: [ {Code:'102', Name:'Rome'}, {...}]-->
+                    <bs-select params="caption:'Choose...', entityAsForeign:person.City , isViewMode:person.isViewMode"></bs-select>   <!-- Items: [ {Code:'102', Name:'Rome'}, {...}]-->
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Num Of Posts</label>
+                    <input data-bind="value:person.NumOfPosts" class="form-control" placeholder="Num Of Posts">
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Last Login</label><br />
+                    <sl-date-picker params="date:person.LastLogin, isViewMode:person.isViewMode" />
+                </div>
+
+            </form>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="twitter" style="width:50%">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input data-bind="value:person.IsOnTwitter" type="checkbox"> Is on Twitter
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Twitter Name</label>
+                    <input data-bind="value:person.TwitterName" class="form-control" placeholder="Twitter Name">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-bind="click: cancelEdit">Cancel</button>
+            <button type="button" class="btn btn-primary" data-bind="click: submitEdit">Save changes</button>
+        </div>
+    </div>
+
+
+</div>
+

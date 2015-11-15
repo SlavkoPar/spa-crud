@@ -1,0 +1,17 @@
+
+<div class="dropdown"> 
+    <span data-bind="text:Label"></span>
+    <button class="btn dropdown-toggle btn-light" style="border-color:#ddd;" type="button" data-bind="attr: {id:myId}" data-toggle="dropdown" aria-expanded="true">
+
+        <!-- ko if: selected -->
+        <span data-bind="text:selected().Name"></span>
+        <!-- /ko -->
+        <!-- ko ifnot: selected -->
+        <span></span>
+        <!-- /ko -->
+        &nbsp;<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" style="" role="menu" data-bind="attr: { 'aria-labelledby':myId }, foreach: Items">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)" data-bind="click:$parent.onChanged, text:$data.Name"></a></li>
+    </ul>
+</div>

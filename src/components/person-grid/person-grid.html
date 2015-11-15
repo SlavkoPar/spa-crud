@@ -1,0 +1,40 @@
+
+
+
+<div class="form-group" style="float:right;margin-bottom:5px;width:140px;text-align:right;">
+    <bs-select params="caption:'ALL', entityAsForeign:filter.City, isViewMode:filter.isViewMode"></bs-select>
+</div> 
+<div style="clear:both"></div>
+
+
+<div style="border:1px solid #ddd;">
+    <sl-grid params="MyGrid: grid, MyPager: pager,
+                    pageSize: pageSize,
+                    Entity: Person,
+                    columns: columns,
+                    orderBy: { Column:'Name', ascending:true }"></sl-grid>
+</div>
+
+<div style ="margin-top:5px;">
+
+    <div style="float:left;" data-bind="PersonGridHandler: true">
+        <a href="#" class="btn btn-default" data-bind='click: addNew'><i class="fa fa-plus"></i>&nbsp;Add</a>
+    </div>
+
+    <div style="float:right;">
+        <sl-pager params="MyGrid: grid, MyPager: pager"></sl-pager>
+    </div>
+
+    <div style="float:right;margin-right:20px;">
+        <drop-down params="Items: [ { Code:6, Name:'6' }, { Code:10, Name:'10' }, { Code:20, Name:'20' }, { Code:50, Name:'50' } ], Code:pageSize, Label:'Page Size:'"></drop-down>
+    </div>
+
+    <div style="clear:both"></div>
+</div>
+
+
+
+
+
+
+

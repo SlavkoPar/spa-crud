@@ -1,0 +1,15 @@
+
+
+<div data-bind="SLDatePickerHandler:true, style : { borderWidth : isViewMode() ? '0px' : '1px' }" class="pppull-left btn"
+     style="bbbackground: #fff; cursor: pointer; padding: 3px 10px; border-style: solid; border-color: #ddd">
+
+    <!-- ko if: !isViewMode() -->
+    <i class="fa fa-calendar"></i>
+    <!-- /ko -->
+
+    <span></span>
+
+    <!-- ko if: !isViewMode() -->
+    <b class="caret"></b>
+    <!-- /ko -->
+</div>
