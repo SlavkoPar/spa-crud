@@ -1,0 +1,202 @@
+#page {
+	margin-top: 80px;
+}
+
+
+.fa.fa-sort {
+    color: rgb(221, 221, 221);
+}
+
+
+.scroller-bar { bbbackground: red; bbborder-left: 1px solid blue; }
+.scroller-track { bbbackground: red; }
+.scroller-handle { bbbackground: blue; bbborder: 1px solid white; }
+
+.scroller-active .scroller-content { padding: 0px; padding-right:2px; }  
+/* 2px is content bellow the scroller-bar, because scroller-bar has width greater then the regular scroll bar */
+
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+    padding: 1px 5px;
+}
+        
+.table-bordered thead:last-child tr:last-child > th:first-child
+{
+    -webkit-border-bottom-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
+}
+
+.table-bordered thead:last-child tr:last-child > th:last-child
+{
+    -webkit-border-bottom-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+}			
+	
+.table-bordered tbody:first-child tr:first-child > td:first-child
+{
+    -webkit-border-top-left-radius: 0px;
+            border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+          
+}
+
+.table-bordered tbody:first-child tr:first-child > th:last-child {
+    -webkit-border-top-right-radius: 0px;
+            border-top-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+}			        
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+    border-bottom-width: 0px;
+}
+
+
+/* --------------------------- */
+/*     sl-grid-header       */
+/* --------------------------- */
+
+.sl-grid-header-container 
+{
+	position: relative;
+	bbbackground-color:  Yellow !important;
+}        
+	    
+.sl-grid-header-container .scroller-active 
+{
+    margin-right:19px;  /* ie 19, chrome 18*/
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .sl-grid-header-container .scroller-active {
+        margin-right:18px;
+    }
+}
+        
+/* scroll bar is 20px, but regular ScrollBar is maybe 19 or 18px
+/*.scroller-bar { width: 20px;  }*/
+
+
+/* --------------------- */
+/*     sl-grid           */
+/* --------------------- */
+        
+.sl-grid-header {
+    table-layout: fixed;
+    white-space: nowrap;
+    border-bottom-width:0;
+    margin-bottom: 0px !important;            
+}
+.sl-grid-header > thead > tr > th {
+    fffont-weight: bold !important;
+}
+
+
+.sl-grid-header-container {
+    background-color: #dee;
+    border-bottom:1px solid #ddd;
+}
+
+.sl-grid-header > thead > tr > th {
+    padding: 5px 5px !important;
+    border-bottom-width:0px !important;
+}
+
+.sl-grid {
+    position: relative !important;
+    table-layout: fixed;
+    white-space: nowrap;
+    border-top-width: 0px !important;
+    margin-bottom: 0px !important;
+}
+        
+.sl-grid > tbody > tr:first-child > td {
+    border-top-width: 0px !important;
+}
+
+/* old  */
+
+.padded {
+    padding:3px;
+}
+
+.table-condensed tbody > tr > td {
+    padding: 3px 5px;
+}
+            
+.sl-grid a {
+    text-decoration:none;
+}
+ 
+tr.row2 {
+}
+
+tr.row2 > td {
+    /* overflow:visible; padding: 0px 0px;border-top-width:0px !important  */
+}
+
+.oddRow {
+    background-color: #efe;
+}
+
+.pagination > li > span {
+  padding: 3px 6px;
+}
+       
+.fa-sort {
+    font-size:14px;
+    color: #ddd;
+}
+            
+a.non-sortable {
+    cursor: default;
+}
+
+/* --------------------------- */
+/*     tab-content             */
+/* --------------------------- */
+        
+.tab-content .padded {
+    padding: 5px;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+
+a {
+  color: #399bff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+
+
+.bootstrap-select .btn {
+    border-color: #ddd;
+}
+
+
+.bootstrap-select > .dropdown-toggle {
+  padding-right: 0px !important;
+}

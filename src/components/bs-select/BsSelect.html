@@ -1,0 +1,11 @@
+
+    <!-- ko if: isViewMode -->
+        <span data-bind="text:Name"></span>
+    <!-- /ko -->
+    
+    <!-- ko if: !isViewMode() -->
+        <select class="selectpicker" data-width="90%" data-container="body"  data-live-search="true" data-bind="BsSelectHandler:true, foreach:Items, value:selectedCode">
+            <option data-bind="text:Name, value:Code"></option>
+        </select>
+    <!-- /ko -->
+

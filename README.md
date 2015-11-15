@@ -1,3 +1,2 @@
 # spa-crud
-Single Page Application for CRUD operations, using Knockout Component "SLGrid" 
-
+Single Page App fro CRUD, using Knockout Component "SLGrid"
