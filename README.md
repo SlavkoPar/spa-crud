@@ -5,10 +5,9 @@ Single Page Application for CRUD using "SLGrid"
 
 Contributors:
 
-* [Slavko Parezanin](mailto:slavko.parezanin@gmail.com)){target="_blank"}
+* <a href="mailto:slavko.parezanin@gmail.com" target="_blank">Slavko Parezanin</a>
 
-License: [MIT](http://www.opensource.org/licenses/mit-license.php)){target="_blank"}
-
+License: [MIT](http://www.opensource.org/licenses/mit-license.php))
 
 ## Introduction
 
@@ -23,7 +22,7 @@ CrossroadsJS implements hashtag routing, and RequireJS handles module loading an
 I was following the presentation of [Steve Sanderson - Architecting large Single Page Applications with Knockout](https://vimeo.com/97519516)
 
 #### Links
-[Try it](http://slavkopar.github.io/spa-crud/dist/index.html)){target="_blank"}
+[Try it](http://slavkopar.github.io/spa-crud/dist/index.html))
 
 ## Background
 
@@ -67,7 +66,8 @@ class Person extends SLEntity {
 }
 
 ```
-[Person source code] (https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person.js)){target="_blank"}
+
+<a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person.js" target="_blank">Person source code</a>
 
 
 ```javascript
@@ -87,7 +87,7 @@ PersonDB.prototype.Url = {
 }
 
 ```
-[PersonDB source code] (https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person-db.js)){target="_blank"}
+<a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person-db.js" target="_blank">PersonDB source code</a>
 
 
 ```javascript
@@ -146,15 +146,18 @@ class PersonGrid {
 }
 
 ```
-* [PersonGrid source code] (https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js)){target="_blank"}
-* [How child knockout components: SLGrid and SLPager get connected](http://jsfiddle.net/SlavkoPar/066kzxjz/)){target="_blank"}
-         
+<a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js" target="_blank">PersonGrid source code</a>
+
+<a href="http://jsfiddle.net/SlavkoPar/066kzxjz/" target="_blank">How child knockout components: SLGrid and SLPager get connected</a>
+
+        
 
 ## Base javascript classes do the job:
-* [SLEntity](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity.js)){target="_blank"}
-* [SLEntityDB](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity-db.js)){target="_blank"}
-* [SLDropdownDB](https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-dropdown-db.js)){target="_blank"}
+* <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity.js" target="_blank">SLEntity source code</a>
+* <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity-db.js" target="_blank">SLEntityDB source code</a>
+* <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-dropdown-db.js" target="_blank">SLDropdownDB source code</a>
 
-##Native Validation Rules
-**Required**:
+
+##More
+**More**:
 
