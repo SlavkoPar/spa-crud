@@ -1,0 +1,8 @@
+.DS_Store
+bower_modules/
+node_modules/
+Web.config
+Web.Debug.config
+
+# Don't track build output    dist/
+
