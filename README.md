@@ -7,7 +7,7 @@ Contributors:
 
 * <a href="mailto:slavko.parezanin@gmail.com" target="_blank">Slavko Parezanin</a>
 
-License: [MIT](http://www.opensource.org/licenses/mit-license.php))
+License: [MIT](http://www.opensource.org/licenses/mit-license.php)
 
 ## Introduction
 
@@ -20,9 +20,10 @@ Actually, this is attempt to finaly define set of actions needed for Create, Rea
 I decided to follow Steve’s Sanderson example, using 'yeoman' to scaffold out an SPA with Knockout, CrossroadsJS and RequireJS.
 CrossroadsJS implements hashtag routing, and RequireJS handles module loading and dependencies.
 I was following the presentation of [Steve Sanderson - Architecting large Single Page Applications with Knockout](https://vimeo.com/97519516)
+* [generator-ko](https://github.com/SteveSanderson/generator-ko)
 
 #### Links
-[Try it](http://slavkopar.github.io/spa-crud/dist/index.html))
+[Try it](http://slavkopar.github.io/spa-crud/dist/index.html)
 
 ## Background
 
@@ -33,6 +34,7 @@ That way we avoid generation of HTML markup and JavaScript code at server, escap
 * Knockout Components, clean way of organizing UI code into self-contained, reusable chunks.
 * Reguirejs, for Asynchronous Module Definition (AMD)
 * gulpjs, The streaming build system 
+* babel, JavaScript ES2015 transpiler
 * JavaScript inheritance pattern
 * jQuery for managing Ajax calls to a services
 * Bootstrap for stylization of HTML markup
@@ -147,6 +149,10 @@ class PersonGrid {
 
 ```
 <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js" target="_blank">PersonGrid source code</a>
+
+
+##How child knockout components: SLGrid and SLPager get connected
+**More**:
 
 <a href="http://jsfiddle.net/SlavkoPar/066kzxjz/" target="_blank">How child knockout components: SLGrid and SLPager get connected</a>
 
