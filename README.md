@@ -187,6 +187,16 @@ Components are a powerful, clean way of organizing your UI code into self-contai
 The mockjax plugin is a development and testing tool for intercepting and simulating ajax requests made with jQuery with a minimal impact on changes to production code. For the purposes of this sample app, server is actually a mocked server,  which enables us to have live demo, without hosting an actual server anywhere.
 
 
-##More
-**More**:
+##Bundling and Minifying 
+**Dynamic loading of components**:
+We set components we need for <i>People</i> into the same bundle
+    bundles: {
+		...
+        'people': [	'components/person-grid/person-grid', 
+					'pages/people/people', 
+					'pages/people/add/person-add', 
+					'pages/people/edit/person-edit']
+    }
+That way we get dynamic loading of 'people.js', only when user clicks on 'People' in top bar menu.
 
+<img srch="PeopleOnDemand.png">
