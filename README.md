@@ -11,7 +11,13 @@ License: [MIT](http://www.opensource.org/licenses/mit-license.php)
 
 ## Introduction
 
-SLGrid is Knockout Component with standard grid features: paging, sorting, filtering, inline editing ...
+SLGrid is Knockout Component with standard grid features: 
+* paging 
+* sorting
+* filtering 
+* inline editing 
+* ...
+
 Additionaly, each grid cell can contain another Knockout Component like DateTimePicker, Drop-Down, and any other reusable component.
 I will present usage of SLGrid component in Single Page Application environment for CRUD operations.
 These grid features are very useful for Admin part of any site with many different tables and relations.
@@ -20,7 +26,8 @@ Actually, this is attempt to finaly define set of actions needed for Create, Rea
 I decided to follow Steve’s Sanderson example, using 'yeoman' to scaffold out an SPA with Knockout, CrossroadsJS and RequireJS.
 CrossroadsJS implements hashtag routing, and RequireJS handles module loading and dependencies.
 I was following the presentation of [Steve Sanderson - Architecting large Single Page Applications with Knockout](https://vimeo.com/97519516)
-* [generator-ko](https://github.com/SteveSanderson/generator-ko)
+<br/>
+[Generate a starting point for a Knockout application](https://github.com/SteveSanderson/generator-ko)
 
 #### Links
 [Try it](http://slavkopar.github.io/spa-crud/dist/index.html)
@@ -31,7 +38,7 @@ SLGrid is client Component grid, rather than grid for ASP.NET 5.1, MVC 4.2, PHP 
 That way we avoid generation of HTML markup and JavaScript code at server, escaping already escaped, and stealing any possible developer creativity with different kind of templates.
 
 ####The key technologies used in this demo are:
-* Knockout Components, clean way of organizing UI code into self-contained, reusable chunks.
+* Knockout Components, clean way of organizing UI code into self-contained, reusable chunks
 * Reguirejs, for Asynchronous Module Definition (AMD)
 * gulpjs, The streaming build system 
 * babel, JavaScript ES2015 transpiler
@@ -42,9 +49,9 @@ That way we avoid generation of HTML markup and JavaScript code at server, escap
 ##Getting Started
 For CRUD operations of an Entity we need to define 3  JavaScript classes, acutally 3 AMD modules.
 In example for entity 'People' we define:
-* Person, inherits SLEntity, definition of properties with default value and validation rules.
-* PersonDB, inherits SLEntityDB, database adapter, different for different types of databases, performs ajax calls to server
-* PersonGrid, uses SLGrid and SLPager, keeping list of entites, performing grid operations like paging, sorting, inline editing ... 
+* <i>Person</i>, inherits <i>SLEntity</i>, definition of properties with default value and validation rules.
+* <i>PersonDB</i>, inherits <i>SLEntityDB</i>, database adapter, different for different types of databases, performs ajax calls to server
+* <i>PersonGrid</i>, uses <i>SLGrid</i> and <i>SLPager</i>, keeping list of entites, performing grid operations like paging, sorting, inline editing ... 
   It defines properties of Person Entity which will be presented in tabular view. 
   It generates Row and RowEdit templates based on definition of columns.
 
@@ -66,9 +73,7 @@ class Person extends SLEntity {
         this.LastLogin = ko.observable(data.LastLogin ? new Date(data.LastLogin) : new Date())
     }
 }
-
 ```
-
 <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person.js" target="_blank">Person source code</a>
 
 
@@ -87,7 +92,6 @@ PersonDB.prototype.Url = {
     "add":    "api/people/post",
     "update":   "api/people/put"
 }
-
 ```
 <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/models/person/person-db.js" target="_blank">PersonDB source code</a>
 
@@ -97,56 +101,57 @@ PersonDB.prototype.Url = {
 
 class PersonGrid {
 
-    constructor(params) {
-        var self = this;
+  constructor(params) {
+    var self = this;
 
-        this.Person = Person;
-        this.pageSize = ko.observable(params.pageSize);
+    this.Person = Person;
+    this.pageSize = ko.observable(params.pageSize);
 
-        this.pager = ko.observable();
-        this.grid = ko.observable();
-        this.grid.subscribe(function (grid) {
-            // now we have the grid component instantiated
-        })
+    this.pager = ko.observable();
+    this.grid = ko.observable();
+    this.grid.subscribe(function (grid) {
+        // now we have the grid component instantiated
+    })
 
-        this.columns = [
-            { fieldName: 'PersonId', header: 'Id', width: '50px', align: 'right' },
-            { fieldName: 'Name', header: 'Name', width: 'auto' }, // markup: "<sl-text-input params='observable:Name'/>" },
-            { fieldName: 'IsOnTwitter', header: 'Twitter', width: '70px', align: 'center', presentation: 'bindingHandlerCheckbox' },
-            { fieldName: 'City', header: 'City', width: '140px', markup: "<bs-select params='entityAsForeign:City, isViewMode:isViewMode' />" },
-            { fieldName: 'NumOfPosts', header: '#Posts', width: '70px', align: 'center' },
-            { fieldName: 'LastLogin', header: 'Last Login', width: '180px', align: 'center', markup: "<sl-date-picker params='date:LastLogin, isViewMode:isViewMode'/>" }, //presentation: 'bindingHandlerDate' },
-            { fieldName: '', header: 'Inline', width: '80px', presentation: 'bindingHandlerEditInline', sortable: false, align: 'center' },
-            { fieldName: '', header: 'Edit', width: '60px', presentation: 'bindingHandlerEdit', sortable: false, align: 'center' }
-        ];
+    this.columns = [
+        { fieldName: 'PersonId', header: 'Id', width: '50px', align: 'right' },
+        { fieldName: 'Name', header: 'Name', width: 'auto' }, 
+        { fieldName: 'IsOnTwitter', header: 'Twitter', width: '70px', align: 'center', presentation: 'bindingHandlerCheckbox' },
+        { fieldName: 'City', header: 'City', width: '140px', 
+					markup: "<bs-select params='entityAsForeign:City, isViewMode:isViewMode' />" },
+        { fieldName: 'NumOfPosts', header: '#Posts', width: '70px', align: 'center' },
+        { fieldName: 'LastLogin', header: 'Last Login', width: '180px', align: 'center', 
+					markup: "<sl-date-picker params='date:LastLogin, isViewMode:isViewMode'/>" },
+        { fieldName: '', header: 'Inline', width: '80px', presentation: 'bindingHandlerEditInline', sortable: false, align: 'center' },
+        { fieldName: '', header: 'Edit', width: '60px', presentation: 'bindingHandlerEdit', sortable: false, align: 'center' }
+    ];
 
-        this.filter = new Person({});
-        this.filter.City.CityId.subscribe(function (newValue) {
-            self.grid().Filter({ CityId: newValue == 'CAPTION' ? 0 : newValue });
-            self.grid().getItems();
-        });
+    this.filter = new Person({});
+    this.filter.City.CityId.subscribe(function (newValue) {
+        self.grid().Filter({ CityId: newValue == 'CAPTION' ? 0 : newValue });
+        self.grid().getItems();
+    });
 
-        this.pageSize.subscribe(function (newValue) {
-            self.grid().getItems(1 /*page*/, newValue /*pageSize*/);
-        });
+    this.pageSize.subscribe(function (newValue) {
+        self.grid().getItems(1 /*page*/, newValue /*pageSize*/);
+    });
 
-        // Add
-        this.addNew = function () {
-            location.hash = '#person-add';
-        }
-
-        // Edit
-        this.editEntity = function (vm, e) {
-            var personDB = Person.prototype.entityDB;
-            personDB.getById(vm.PersonId(), function (data) {
-                window.personData = data;
-                location.hash = '#person-edit/' + vm.PersonId();
-            })
-        }
-
+    // Add
+    this.addNew = function () {
+        location.hash = '#person-add';
     }
-}
 
+    // Edit
+    this.editEntity = function (vm, e) {
+        var personDB = Person.prototype.entityDB;
+        personDB.getById(vm.PersonId(), function (data) {
+            window.personData = data;
+            location.hash = '#person-edit/' + vm.PersonId();
+        })
+    }
+
+  }
+}
 ```
 <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js" target="_blank">PersonGrid source code</a>
 
