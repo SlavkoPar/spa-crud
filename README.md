@@ -34,9 +34,7 @@ Getting the Knockout project going was surprisingly easy.
 Here are the commands to install 'Yeoman' and scaffold the project:
 
 npm install -g yo
-
 npm install -g generator-ko
-
 yo ko
 
 That gives us a simple project structure with routing and two initial views (Home and About pages).
@@ -174,6 +172,7 @@ class PersonGrid {
 ##How child knockout components: SLGrid and SLPager get connected
 Components are a powerful, clean way of organizing your UI code into self-contained, reusable chunks.
 **More**:
+
 <a href="http://jsfiddle.net/SlavkoPar/066kzxjz/" target="_blank">How child knockout components: SLGrid and SLPager get connected</a>
 
         
