@@ -16,9 +16,9 @@ SLGrid is Knockout Component with standard grid features:
 * sorting
 * filtering 
 * inline editing 
+* each cell can contain another Knockout Component like DateTimePicker, Drop-Down, and any other reusable component
 * ...
 
-Additionaly, each grid cell can contain another Knockout Component like DateTimePicker, Drop-Down, and any other reusable component.
 I will present usage of SLGrid component in Single Page Application environment for CRUD operations.
 These grid features are very useful for Admin part of any site with many different tables and relations.
 Actually, this is attempt to finaly define set of actions needed for Create, Read, Update and Delete some entity.
@@ -33,14 +33,14 @@ I was following the presentation of [Steve Sanderson - Architecting large Single
 Getting the Knockout project going was surprisingly easy.
 Here are the commands to install 'Yeoman' and scaffold the project:
 
-npm install -g yo
-npm install -g generator-ko
-yo ko
+   npm install -g yo
+   npm install -g generator-ko
+   yo ko
 
 That gives us a simple project structure with routing and two initial views (Home and About pages).
 Adding additional views and components can be done manually, but Yeoman also provides a shortcut command:
 
-yo ko:component <name>
+   yo ko:component <name>
 
 #### Links
 [Try it](http://slavkopar.github.io/spa-crud/dist/index.html)
@@ -62,9 +62,9 @@ That way we avoid generation of HTML markup and JavaScript code at server, escap
 ##Getting Started
 For CRUD operations of an Entity we need to define 3  JavaScript classes, acutally 3 AMD modules.
 In example for entity 'People' we define:
-* <i>Person</i>, inherits <i>SLEntity</i>, definition of properties with default value and validation rules.
-* <i>PersonDB</i>, inherits <i>SLEntityDB</i>, database adapter, different for different types of databases, performs ajax calls to server
-* <i>PersonGrid</i>, uses <i>SLGrid</i> and <i>SLPager</i>, keeping list of entites, performing grid operations like paging, sorting, inline editing ... 
+* *Person*, inherits *SLEntity*, definition of properties with default value and validation rules.
+* *PersonDB*, inherits *SLEntityDB*, database adapter, different for different types of databases, performs ajax calls to server
+* *PersonGrid*, uses *SLGrid* and *SLPager*, keeping list of entites, performing grid operations like paging, sorting, inline editing ... 
   It defines properties of Person Entity which will be presented in tabular view. 
   It generates Row and RowEdit templates based on definition of columns.
 
@@ -169,7 +169,7 @@ class PersonGrid {
 <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js" target="_blank">PersonGrid source code</a>
 
 
-##How child knockout components: SLGrid and SLPager get connected
+##How child knockout components SLGrid and SLPager get connected
 Components are a powerful, clean way of organizing your UI code into self-contained, reusable chunks.
 **More**:
 
@@ -190,7 +190,7 @@ The mockjax plugin is a development and testing tool for intercepting and simula
 ##Bundling and Minifying 
 **Dynamic loading of components**:
 
-We set components we need for <i>People</i> into the same bundle
+We set components we need for *People* into the same bundle
 
 	bundles: {
 		...
