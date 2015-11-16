@@ -29,6 +29,18 @@ I was following the presentation of [Steve Sanderson - Architecting large Single
 <br/>
 [Generate a starting point for a Knockout application](https://github.com/SteveSanderson/generator-ko)
 
+Getting the Knockout project going was surprisingly easy.
+Here are the commands to install 'Yeoman' and scaffold the project:
+
+npm install -g yo
+npm install -g generator-ko
+yo ko
+
+That gives us a simple project structure with routing and two initial views (Home and About pages).
+Adding additional views and components can be done manually, but Yeoman also provides a shortcut command:
+
+yo ko:component <name>
+
 #### Links
 [Try it](http://slavkopar.github.io/spa-crud/dist/index.html)
 
@@ -157,8 +169,8 @@ class PersonGrid {
 
 
 ##How child knockout components: SLGrid and SLPager get connected
+Components are a powerful, clean way of organizing your UI code into self-contained, reusable chunks.
 **More**:
-
 <a href="http://jsfiddle.net/SlavkoPar/066kzxjz/" target="_blank">How child knockout components: SLGrid and SLPager get connected</a>
 
         
@@ -167,6 +179,10 @@ class PersonGrid {
 * <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity.js" target="_blank">SLEntity source code</a>
 * <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity-db.js" target="_blank">SLEntityDB source code</a>
 * <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-dropdown-db.js" target="_blank">SLDropdownDB source code</a>
+
+
+## Mocker
+The mockjax plugin is a development and testing tool for intercepting and simulating ajax requests made with jQuery with a minimal impact on changes to production code. For the purposes of this sample app, server is actually a mocked server,  which enables us to have live demo, without hosting an actual server anywhere.
 
 
 ##More
