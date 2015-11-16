@@ -193,17 +193,11 @@ The mockjax plugin is a development and testing tool for intercepting and simula
 We set components we need for <i>People</i> into the same bundle
 
 	bundles: {
-		
 		...
-        
 		'people': [	'components/person-grid/person-grid', 
-		
 					'pages/people/people', 
-		
 					'pages/people/add/person-add', 
-		
 					'pages/people/edit/person-edit']
-    
 	}
 
 That way we get dynamic loading of 'people.js', only when user clicks on 'People' in top bar menu.
