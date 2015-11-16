@@ -26,14 +26,17 @@ Actually, this is attempt to finaly define set of actions needed for Create, Rea
 I decided to follow Steve’s Sanderson example, using 'yeoman' to scaffold out an SPA with Knockout, CrossroadsJS and RequireJS.
 CrossroadsJS implements hashtag routing, and RequireJS handles module loading and dependencies.
 I was following the presentation of [Steve Sanderson - Architecting large Single Page Applications with Knockout](https://vimeo.com/97519516)
-<br/>
+
+
 [Generate a starting point for a Knockout application](https://github.com/SteveSanderson/generator-ko)
 
 Getting the Knockout project going was surprisingly easy.
 Here are the commands to install 'Yeoman' and scaffold the project:
 
 npm install -g yo
+
 npm install -g generator-ko
+
 yo ko
 
 That gives us a simple project structure with routing and two initial views (Home and About pages).
