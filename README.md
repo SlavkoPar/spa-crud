@@ -189,14 +189,14 @@ The mockjax plugin is a development and testing tool for intercepting and simula
 
 ##Bundling and Minifying 
 **Dynamic loading of components**:
-We set components we need for <i>People</i> into the same bundle
-    bundles: {
+--We set components we need for <i>People</i> into the same bundle
+    --bundles: {
 		...
-        'people': [	'components/person-grid/person-grid', 
-					'pages/people/people', 
-					'pages/people/add/person-add', 
-					'pages/people/edit/person-edit']
-    }
-That way we get dynamic loading of 'people.js', only when user clicks on 'People' in top bar menu.
+        --'people': [	'components/person-grid/person-grid', 
+		--			'pages/people/people', 
+		--			'pages/people/add/person-add', 
+		--			'pages/people/edit/person-edit']
+    --}
+--That way we get dynamic loading of 'people.js', only when user clicks on 'People' in top bar menu.
 
-<img srch="PeopleOnDemand.png">
+<img src="PeopleOnDemand.png">
