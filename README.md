@@ -243,28 +243,28 @@ Also 'yeoman' generates others file needed for CRUD operations for *City*.
 
 **components/**
 
- 	__city-grid/__
+ 	city-grid/
 
 		city-grid.js
 
 		city-grid.html
 
-__models/__
+**models/**
 
-	__city/__
+	city/
 
 		city.js
 		city-db.js
 
  **pages/**
 
-	**add/**
+	add/
 
 		city-add.js
 
 		city-add.html
 
-	**edit/**
+	edit/
 
 		city-edit.js
 
