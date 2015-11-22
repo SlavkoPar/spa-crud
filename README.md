@@ -258,7 +258,7 @@ Also 'yeoman' generates others file needed for CRUD operations for *City*.
 
  **pages/**
 	
-	people/
+	cities/
 
 		add/
 
