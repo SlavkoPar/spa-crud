@@ -237,28 +237,29 @@ class City extends SLentity
 ```
 
 Also 'yeoman' generates others file needed for CRUD operations for *City*.
+
 * CityController at server for operations  getItems, getById, Add, Update and Remove
 * CityDto - data transfer objec beween client and server  
 
-components/
-	city-grid/
-		city-grid.js
-		city-grid.html
+* components/
+*	city-grid/
+*		city-grid.js
+*		city-grid.html
 
-models/
-	city/
-		city.js
-		city-db.js
+* models/
+*	city/
+*		city.js
+*		city-db.js
 
-pages/
-	add/
-		city-add.js
-		city-add.html
-	edit/
-		city-edit.js
-		city-edit.html
-	cities.js
-	cities.html
+* pages/
+*	add/
+*		city-add.js
+*		city-add.html
+*	edit/
+*		city-edit.js
+*		city-edit.html
+*	cities.js
+*	cities.html
 
 
 
