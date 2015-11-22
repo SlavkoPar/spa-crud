@@ -257,22 +257,24 @@ Also 'yeoman' generates others file needed for CRUD operations for *City*.
 		city-db.js
 
  **pages/**
+	
+	people/
 
-	add/
+		add/
 
-		city-add.js
+			city-add.js
 
-		city-add.html
+			city-add.html
 
-	edit/
+		edit/
 
-		city-edit.js
+			city-edit.js
 
-		city-edit.html
+			city-edit.html
 
-	cities.js
+		cities.js
 
-	cities.html
+		cities.html
 
 
 
