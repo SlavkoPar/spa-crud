@@ -34,7 +34,11 @@ Getting the Knockout project going was surprisingly easy.
 Here are the commands to install 'Yeoman' and scaffold the project:
 
    npm install -g yo
+
+
    npm install -g generator-ko
+
+
    yo ko
 
 That gives us a simple project structure with routing and two initial views (Home and About pages).
@@ -141,8 +145,9 @@ class PersonGrid {
 
     this.filter = new Person({});
     this.filter.City.CityId.subscribe(function (newValue) {
-        self.grid().Filter({ CityId: newValue == 'CAPTION' ? 0 : newValue });
-        self.grid().getItems();
+        self.grid()
+			.Filter({ CityId: newValue == 'CAPTION' ? 0 : newValue })
+			.getItems();
     });
 
     this.pageSize.subscribe(function (newValue) {
