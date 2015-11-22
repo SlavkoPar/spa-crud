@@ -169,13 +169,18 @@ class PersonGrid {
 <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/components/person-grid/person-grid.js" target="_blank">PersonGrid source code</a>
 
 
-##How child knockout components SLGrid and SLPager get connected
+##How child Knockout components communicate 
 Components are a powerful, clean way of organizing your UI code into self-contained, reusable chunks.
-**More**:
+Components communicate through 'params' object that will be passed on to the component. 
+Typically this is a key-value object containing multiple parameters, and is typically received by the component’s viewmodel constructor.
 
-<a href="http://jsfiddle.net/SlavkoPar/066kzxjz/" target="_blank">How child knockout components: SLGrid and SLPager get connected</a>
+**This picture presents the way Filter (drop-down) and SLGrid communicate**:
+<img src="SLGridFilter.png">
 
-        
+
+####How child Knockout components SLGrid and SLPager get connected
+<a href="http://jsfiddle.net/SlavkoPar/066kzxjz/" target="_blank">How child knockout components SLGrid and SLPager get connected</a>
+       
 
 ## Base javascript classes do the job:
 * <a href="https://github.com/SlavkoPar/spa-crud/blob/master/src/app/sl-grid/sl-entity.js" target="_blank">SLEntity source code</a>
@@ -203,3 +208,61 @@ We set components we need for *People* into the same bundle
 That way we get dynamic loading of 'people.js', only when user clicks on 'People' in top bar menu.
 
 <img src="PeopleOnDemand.png">
+
+
+## Yeoman generator
+
+**The plan is to make *generator-sl-grid* tool** using 
+http://yeoman.io/authoring/
+
+Generator would read any Database definition: tables, columns and relations, generating pages and components needed for CRUD operations for some table (Entity).
+That way we could generate complete starting point of some Admin site with many tables. 
+With well designed components and JavaScript classes, it would be much more easier for developers to customize templates and implement additional logic.
+
+For example reading definition of table City we could generate City class 
+
+```javascript
+class City extends SLentity 
+{
+    constructor(data) {
+        super(data);
+
+        this.CityId = ko.observable(data.CityId).extend({ defaultValue: 102, required: true, minLength: 2 })
+        this.Name = ko.observable(data.Name)
+		
+        this.CountryId = ko.observable(data.CountryId).extend({ foreignKey: Country })
+    }
+
+}
+```
+
+Also 'yeoman' generates others file needed for CRUD operations for *City*.
+* CityController at server for operations  getItems, getById, Add, Update and Remove
+* CityDto - data transfer objec beween client and server  
+
+components/
+	city-grid/
+		city-grid.js
+		city-grid.html
+
+models/
+	city/
+		city.js
+		city-db.js
+
+pages/
+	add/
+		city-add.js
+		city-add.html
+	edit/
+		city-edit.js
+		city-edit.html
+	cities.js
+	cities.html
+
+
+
+
+
+
+
