@@ -242,21 +242,28 @@ Also 'yeoman' generates others file needed for CRUD operations for *City*.
 * CityDto - data transfer object between client and server  
 
  **components/**
+
  	**city-grid/**
+
 		city-grid.js
 		city-grid.html
 
 **models/**
+
 	**city/**
+
 		city.js
 		city-db.js
 
  **pages/**
+
 	**add/**
+
 		city-add.js
 		city-add.html
 
 	**edit/**
+
 		city-edit.js
 		city-edit.html
 
