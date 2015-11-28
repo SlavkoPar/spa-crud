@@ -19,7 +19,7 @@
     "knockout-validation": "~2.0.3",
     "pnotify": "~2.1.0",
     "bootstrap-daterangepicker": "~2.1.13",
-    "bootstrap-select": "~1.7.5",
+    "bootstrap-select": "~2.0.0-beta1",
     "font-awesome": "~4.4.0",
     "jquery-mockjax": "~2.0.1"
   }
