@@ -25,9 +25,6 @@ class Person extends SLEntity {
 
 }
 
-//Person.prototype = Object.create(SLEntity.prototype);
-//Person.prototype.constructor = Person;
-
 Person.prototype.primaryKey = "PersonId";
 Person.prototype.allFieldsExceptDB = [];
 

@@ -50,8 +50,9 @@ class PersonGrid {
         this.filter.displayMode("formEdit");
         this.filter.City.CityId('CAPTION'); // instead of default value, CAPTION is additional drop-down option, with caption text 'ALL' or 'Nothing selected'
         this.filter.City.CityId.subscribe(function (newValue) {
-            self.grid().Filter({ CityId: newValue == 'CAPTION' ? 0 : newValue });
-            self.grid().getItems();
+            self.grid()
+                .Filter({ CityId: newValue == 'CAPTION' ? 0 : newValue })
+                .getItems();
         });
 
 
