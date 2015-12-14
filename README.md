@@ -16,7 +16,7 @@ SLGrid is Knockout Component with standard grid features:
 * sorting
 * filtering 
 * inline editing 
-* each cell can contain another Knockout Component like DateTimePicker, Drop-Down, and any other reusable component
+* each cell can contain another Knockout Component like DatePicker, Drop-Down, Calendar or any other reusable component
 * ...
 
 I will present usage of SLGrid component in Single Page Application environment for CRUD operations.
@@ -203,7 +203,7 @@ The mockjax plugin is a development and testing tool for intercepting and simula
 We set components we need for *People* into the same bundle
 
 	bundles: {
-		...
+		//...
 		'people': [	'components/person-grid/person-grid', 
 					'pages/people/people', 
 					'pages/people/add/person-add', 
@@ -284,8 +284,12 @@ Also 'yeoman' generates others file needed for CRUD operations for *City*.
 
 
 
-## Task runner for Gulp directly within Visual Studio 2013.
+## Task runner for Gulp directly within Visual Studio 
 
+**VS 2015**
+http://docs.asp.net/en/latest/client-side/using-gulp.html
+
+**VS 2013**
 https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708
 
 
