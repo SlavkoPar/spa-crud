@@ -284,7 +284,7 @@ Also 'yeoman' generates others file needed for CRUD operations for *City*.
 
 
 
-## Task runner for Gulp directly within Visual Studio 
+## Task runner for Gulp directly within Visual Studio  
 
 **VS 2015**
 http://docs.asp.net/en/latest/client-side/using-gulp.html
